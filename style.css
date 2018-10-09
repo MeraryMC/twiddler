@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(to top, #6495ED 0%, #FFF0F5 100%) no-repeat center center fixed;
+  font-family: Palatino;
+  text-align: left;
+  font-size: 18px;
+  color: darkslateblue
+}
+
+#title {
+  text-align: center;
+  font-size: 25px;
+  color: midnightblue;
+}
+
+h1 {
+  font-family: Luminari;
+}
+
+#newestTweeds {
+  font-family: Palatino;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F08080;
+  border-radius: 5px;
+  color: white;
+  margin: auto;
+  display: block;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.tweedFeed {
+    min-width: 900px;
+  	max-width: 900px;
+    overflow: scroll;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.tweedBody {
+    background-color: white;
+    margin: 20px auto;
+    border: 3px solid #FEBDA5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
