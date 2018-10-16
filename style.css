@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(to top, #6495ED 0%, #FFF0F5 100%) no-repeat center center fixed;
+  background-image: url(./img/nordwood-themes-524102-unsplash.jpg);
+  background-size: 99.9%;
   font-family: Palatino;
   text-align: left;
   font-size: 18px;
