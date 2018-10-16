@@ -7,25 +7,25 @@ $(document).ready(function(){
   var tweedGenerator = function(tweet) {
     var $tweet = $('<div class="tweedBody"></div>');
     var $tweetMsg = $('<div></div>');
-    var $tweetDate = $('<div></div>');
     var $tweetUser = $('<a href="#"></a>');
+    var $dateTime = $('<span class=dateTime></span>');
     $tweetMsg.text(tweet.message);
-    $tweetDate.text("Published on: " + tweet.created_at);
-    $tweetDate.css({
-      'color': 'DarkGrey',
-      'font-size': '13px'
-    });
     $tweetUser.text('@' + tweet.user);
     $tweetUser.css({
       'color': 'indigo',
       'font-weight': 'bold'
+    });
+    $dateTime.attr('data-livestamp', tweet.created_at.toUTCString());
+    $dateTime.css({
+      'color': 'DarkGrey',
+      'font-size': '13px'
     });
     $tweetUser.click(function(){
       setTweedsByUser(tweet.user);
     });
     $tweet.append($tweetUser);
     $tweet.append($tweetMsg);
-    $tweet.append($tweetDate);
+    $tweet.append($dateTime);
     return $tweet;
   }
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
       count = streams.home.length - 1;
     }
     logTweeds(newTweeds);
-    setTimeout(tweedChecker, Math.random() * 4000);
+    setTimeout(tweedChecker, Math.random() * 10000);
   };
 
   var streamTweeds = function(stream, index) {
